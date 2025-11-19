@@ -1,0 +1,142 @@
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+  background-color: transparent;
+  transition: var(--transition);
+  padding: 1.5rem 0;
+}
+
+.header.scrolled {
+  background-color: rgba(10, 31, 31, 0.95);
+  backdrop-filter: blur(20px);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
+  border-bottom: 1px solid var(--color-border);
+  padding: 1rem 0;
+}
+
+.header-container {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 0 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  font-family: var(--font-heading);
+  font-size: 1.75rem;
+  font-weight: 600;
+  color: var(--color-text);
+  cursor: pointer;
+  transition: var(--transition);
+  letter-spacing: 1px;
+}
+
+.logo:hover {
+  color: var(--color-secondary);
+}
+
+.desktop-nav {
+  display: flex;
+  gap: 2.5rem;
+  align-items: center;
+}
+
+.desktop-nav button {
+  background: none;
+  border: none;
+  font-family: var(--font-body);
+  font-size: 0.95rem;
+  font-weight: 400;
+  color: var(--color-text-light);
+  cursor: pointer;
+  position: relative;
+  padding: 0.5rem 0;
+  transition: var(--transition);
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.desktop-nav button::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 0;
+  height: 2px;
+  background-color: var(--color-secondary);
+  transition: width 0.3s ease;
+}
+
+.desktop-nav button:hover {
+  color: var(--color-secondary);
+}
+
+.desktop-nav button:hover::after {
+  width: 100%;
+}
+
+.menu-toggle {
+  display: none;
+  background: none;
+  border: none;
+  font-size: 1.5rem;
+  color: var(--color-primary);
+  cursor: pointer;
+  z-index: 1001;
+}
+
+.mobile-nav {
+  display: none;
+}
+
+@media (max-width: 768px) {
+  .desktop-nav {
+    display: none;
+  }
+
+  .menu-toggle {
+    display: block;
+  }
+
+  .mobile-nav {
+    display: flex;
+    flex-direction: column;
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 70%;
+    max-width: 300px;
+    height: 100vh;
+    background-color: var(--color-bg);
+    box-shadow: var(--shadow-lg);
+    padding: 6rem 2rem 2rem;
+    gap: 1.5rem;
+  }
+
+  .mobile-nav button {
+    background: none;
+    border: none;
+    font-family: var(--font-body);
+    font-size: 1.1rem;
+    font-weight: 400;
+    color: var(--color-text);
+    cursor: pointer;
+    text-align: left;
+    padding: 1rem 0;
+    border-bottom: 1px solid var(--color-border);
+    transition: var(--transition);
+    text-transform: uppercase;
+    letter-spacing: 1px;
+  }
+
+  .mobile-nav button:hover {
+    color: var(--color-secondary);
+    padding-left: 1rem;
+  }
+}
