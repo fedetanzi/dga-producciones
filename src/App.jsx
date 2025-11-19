@@ -7,7 +7,6 @@ import Portfolio from './components/Portfolio'
 import FeaturedCases from './components/FeaturedCases'
 import WorkProcess from './components/WorkProcess'
 import Testimonials from './components/Testimonials'
-import Availability from './components/Availability'
 import Contact from './components/Contact'
 import Footer from './components/Footer'
 import './App.css'
@@ -34,7 +33,6 @@ function App() {
         <FeaturedCases />
         <WorkProcess />
         <Testimonials />
-        <Availability />
         <Contact />
       </main>
       <Footer />

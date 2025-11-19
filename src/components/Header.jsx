@@ -1,6 +1,7 @@
 import React, { useState } from 'react'
 import { motion, AnimatePresence } from 'framer-motion'
 import { FaBars, FaTimes } from 'react-icons/fa'
+import Logo from './Logo'
 import './Header.css'
 
 const Header = ({ isScrolled }) => {
@@ -35,7 +36,7 @@ const Header = ({ isScrolled }) => {
           whileHover={{ scale: 1.05 }}
           onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
         >
-          DGA Producciones
+          <Logo width={isScrolled ? "180" : "200"} />
         </motion.div>
 
         <nav className="desktop-nav">
