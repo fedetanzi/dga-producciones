@@ -43,7 +43,6 @@ const Contact = () => {
   const handleChange = (e) => {
     const { name, value } = e.target
     setFormData(prev => ({ ...prev, [name]: value }))
-    // Clear error when user starts typing
     if (errors[name]) {
       setErrors(prev => ({ ...prev, [name]: '' }))
     }
@@ -53,11 +52,9 @@ const Contact = () => {
     e.preventDefault()
     
     if (validateForm()) {
-      // Here you would typically send the data to your backend
       console.log('Form submitted:', formData)
       setSubmitted(true)
       
-      // Reset form after 3 seconds
       setTimeout(() => {
         setFormData({
           name: '',
@@ -81,11 +78,9 @@ const Contact = () => {
           initial={{ opacity: 0, y: 30 }}
           animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 30 }}
           transition={{ duration: 0.6 }}
+          className="contact-header"
         >
-          <h2 className="section-title">Contacto</h2>
-          <p className="section-subtitle">
-            Comencemos a planificar tu evento soñado
-          </p>
+          <h2 className="section-title">Comencemos a planificar tu evento soñado</h2>
         </motion.div>
 
         <div className="contact-grid">
@@ -97,8 +92,7 @@ const Contact = () => {
           >
             <h3>Hablemos</h3>
             <p>
-              Estamos aquí para escuchar tu visión y convertirla en realidad. 
-              Contáctanos para una consulta personalizada.
+              Estamos aquí para escuchar tu visión y convertirla en realidad. Contáctanos para una consulta personalizada.
             </p>
 
             <div className="contact-details">
@@ -108,42 +102,39 @@ const Contact = () => {
               </div>
               <div className="contact-item">
                 <FaEnvelope />
-                <a href="mailto:info@dgaproducciones.com">info@dgaproducciones.com</a>
+                <a href="mailto:dgaproducciones@hotmail.com">dgaproducciones@hotmail.com</a>
               </div>
               <div className="contact-item">
                 <FaPhone />
-                <a href="tel:+5491123456789">+54 9 11 2345-6789</a>
+                <a href="tel:+5491155672305">1155672305</a>
               </div>
             </div>
 
             <div className="social-links">
-              <h4>Síguenos</h4>
-              <div className="social-icons">
-                <a 
-                  href="https://wa.me/5491123456789" 
-                  target="_blank" 
-                  rel="noopener noreferrer"
-                  aria-label="WhatsApp"
-                >
-                  <FaWhatsapp />
-                </a>
-                <a 
-                  href="https://instagram.com/dgaproducciones" 
-                  target="_blank" 
-                  rel="noopener noreferrer"
-                  aria-label="Instagram"
-                >
-                  <FaInstagram />
-                </a>
-                <a 
-                  href="https://tiktok.com/@dgaproducciones" 
-                  target="_blank" 
-                  rel="noopener noreferrer"
-                  aria-label="TikTok"
-                >
-                  <FaTiktok />
-                </a>
-              </div>
+              <a 
+                href="https://wa.me/5491155672305" 
+                target="_blank" 
+                rel="noopener noreferrer"
+                aria-label="WhatsApp"
+              >
+                <FaWhatsapp />
+              </a>
+              <a 
+                href="https://instagram.com/dgaproducciones" 
+                target="_blank" 
+                rel="noopener noreferrer"
+                aria-label="Instagram"
+              >
+                <FaInstagram />
+              </a>
+              <a 
+                href="https://tiktok.com/@dgaproducciones" 
+                target="_blank" 
+                rel="noopener noreferrer"
+                aria-label="TikTok"
+              >
+                <FaTiktok />
+              </a>
             </div>
           </motion.div>
 
@@ -154,33 +145,31 @@ const Contact = () => {
             animate={isInView ? { opacity: 1, x: 0 } : { opacity: 0, x: 30 }}
             transition={{ duration: 0.6, delay: 0.4 }}
           >
-            <div className="form-row">
-              <div className="form-group">
-                <input
-                  type="text"
-                  name="name"
-                  value={formData.name}
-                  onChange={handleChange}
-                  placeholder="Nombre completo *"
-                  className={errors.name ? 'error' : ''}
-                />
-                {errors.name && <span className="error-message">{errors.name}</span>}
-              </div>
+            <div className="form-group">
+              <input
+                type="text"
+                name="name"
+                value={formData.name}
+                onChange={handleChange}
+                placeholder="Nombre completo *"
+                className={errors.name ? 'error' : ''}
+              />
+              {errors.name && <span className="error-message">{errors.name}</span>}
+            </div>
 
+            <div className="form-row">
               <div className="form-group">
                 <input
                   type="email"
                   name="email"
                   value={formData.email}
                   onChange={handleChange}
-                  placeholder="Email *"
+                  placeholder="Mail *"
                   className={errors.email ? 'error' : ''}
                 />
                 {errors.email && <span className="error-message">{errors.email}</span>}
               </div>
-            </div>
 
-            <div className="form-row">
               <div className="form-group">
                 <input
                   type="tel"
@@ -192,7 +181,9 @@ const Contact = () => {
                 />
                 {errors.phone && <span className="error-message">{errors.phone}</span>}
               </div>
+            </div>
 
+            <div className="form-row">
               <div className="form-group">
                 <select
                   name="eventType"
@@ -201,27 +192,25 @@ const Contact = () => {
                   className={errors.eventType ? 'error' : ''}
                 >
                   <option value="">Tipo de evento *</option>
-                  <option value="boda">Boda</option>
-                  <option value="cumpleanos">Cumpleaños</option>
-                  <option value="corporativo">Evento Corporativo</option>
-                  <option value="aniversario">Aniversario</option>
-                  <option value="otro">Otro</option>
+                  <option value="social">Social</option>
+                  <option value="corporativo">Corporativo</option>
+                  <option value="masivo">Masivo</option>
                 </select>
                 {errors.eventType && <span className="error-message">{errors.eventType}</span>}
               </div>
-            </div>
 
-            <div className="form-row">
               <div className="form-group">
                 <input
                   type="date"
                   name="eventDate"
                   value={formData.eventDate}
                   onChange={handleChange}
-                  placeholder="Fecha tentativa"
+                  placeholder="Fecha estimada"
                 />
               </div>
+            </div>
 
+            <div className="form-row">
               <div className="form-group">
                 <input
                   type="text"
@@ -231,16 +220,16 @@ const Contact = () => {
                   placeholder="Cantidad de invitados"
                 />
               </div>
-            </div>
 
-            <div className="form-group">
-              <input
-                type="text"
-                name="location"
-                value={formData.location}
-                onChange={handleChange}
-                placeholder="Ubicación del evento"
-              />
+              <div className="form-group">
+                <input
+                  type="text"
+                  name="location"
+                  value={formData.location}
+                  onChange={handleChange}
+                  placeholder="Ubicación del evento"
+                />
+              </div>
             </div>
 
             <div className="form-group">
@@ -260,7 +249,7 @@ const Contact = () => {
               className="btn btn-primary btn-submit"
               disabled={submitted}
             >
-              {submitted ? 'Mensaje Enviado ✓' : 'Solicitar Propuesta'}
+              {submitted ? 'Mensaje Enviado ✓' : 'Solicitar propuesta'}
             </button>
           </motion.form>
         </div>

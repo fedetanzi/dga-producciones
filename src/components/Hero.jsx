@@ -11,8 +11,6 @@ const Hero = () => {
     }
   }
 
-  const words = ["Creamos", "experiencias", "inolvidables"]
-
   return (
     <section className="hero" id="hero">
       <div className="hero-background">
@@ -26,22 +24,7 @@ const Hero = () => {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 1, delay: 0.2 }}
         >
-          {words.map((word, index) => (
-            <motion.span
-              key={index}
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ 
-                duration: 0.8, 
-                delay: 0.3 + index * 0.2,
-                type: "spring",
-                stiffness: 100
-              }}
-              style={{ display: 'inline-block', marginRight: '0.5rem' }}
-            >
-              {word}
-            </motion.span>
-          ))}
+          Producción integral de eventos de alto impacto
         </motion.h1>
         
         <motion.p
@@ -50,7 +33,7 @@ const Hero = () => {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 1 }}
         >
-          Producción <span className="highlight">integral de eventos de lujo</span> con proyección nacional e internacional
+          sociales • corporativos • masivos
         </motion.p>
 
         <motion.div 
@@ -65,15 +48,7 @@ const Hero = () => {
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
           >
-            Solicitar Propuesta
-          </motion.button>
-          <motion.button 
-            className="btn btn-secondary"
-            onClick={() => scrollToSection('portfolio')}
-            whileHover={{ scale: 1.05 }}
-            whileTap={{ scale: 0.95 }}
-          >
-            Ver Portafolio
+            Planificar mi evento
           </motion.button>
         </motion.div>
 
@@ -82,7 +57,7 @@ const Hero = () => {
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ duration: 1, delay: 1.5 }}
-          onClick={() => scrollToSection('about')}
+          onClick={() => scrollToSection('services')}
         >
           <motion.div
             animate={{

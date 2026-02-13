@@ -1,12 +1,12 @@
 import React, { useState, useEffect } from 'react'
-import Header from './components/Header'
 import Hero from './components/Hero'
-import About from './components/About'
-import Services from './components/Services'
-import Portfolio from './components/Portfolio'
+import WhatWeDo from './components/WhatWeDo'
 import FeaturedCases from './components/FeaturedCases'
+import Services from './components/Services'
 import WorkProcess from './components/WorkProcess'
-import Testimonials from './components/Testimonials'
+import About from './components/About'
+import Portfolio from './components/Portfolio'
+import CTA from './components/CTA'
 import Contact from './components/Contact'
 import Footer from './components/Footer'
 import './App.css'
@@ -24,15 +24,15 @@ function App() {
 
   return (
     <div className="App">
-      <Header isScrolled={isScrolled} />
       <main>
         <Hero />
-        <About />
-        <Services />
-        <Portfolio />
+        <WhatWeDo />
         <FeaturedCases />
+        <Services />
         <WorkProcess />
-        <Testimonials />
+        <About />
+        <Portfolio />
+        <CTA />
         <Contact />
       </main>
       <Footer />

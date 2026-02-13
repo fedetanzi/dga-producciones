@@ -13,31 +13,31 @@ const WorkProcess = () => {
     {
       number: "01",
       icon: <FaSearch />,
-      title: "Consulta Inicial",
-      description: "Conocemos tu visión, objetivos y necesidades específicas para tu evento."
+      title: "Consulta inicial",
+      description: "Conocemos tu visión y objetivos"
     },
     {
       number: "02",
       icon: <FaLightbulb />,
       title: "Conceptualización",
-      description: "Desarrollamos un concepto único y personalizado que refleja tu estilo y aspiraciones."
+      description: "Creamos un concepto único y personalizado"
     },
     {
       number: "03",
       icon: <FaPencilRuler />,
-      title: "Planificación Detallada",
-      description: "Diseñamos cada aspecto del evento: ambientación, logística, timing y proveedores."
+      title: "Planificación detallada",
+      description: "Diseñamos cada aspecto técnico, estético y logístico."
     },
     {
       number: "04",
       icon: <FaCogs />,
-      title: "Producción y Montaje",
-      description: "Ejecutamos con precisión cada detalle, coordinando todos los elementos técnicos y estéticos."
+      title: "Producción y montaje",
+      description: "Ejecutamos cada detalle con precisión"
     },
     {
       number: "05",
       icon: <FaCheckCircle />,
-      title: "Experiencia y Cierre",
+      title: "Experiencia y cierre",
       description: "Garantizamos que todo fluya perfectamente, permitiéndote disfrutar cada momento."
     }
   ]
@@ -50,9 +50,9 @@ const WorkProcess = () => {
           animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 30 }}
           transition={{ duration: 0.6 }}
         >
-          <h2 className="section-title">Nuestro Proceso</h2>
+          <h2 className="section-title">nuestro proceso</h2>
           <p className="section-subtitle">
-            Cinco pasos hacia la perfección
+            5 pasos hacia la perfección
           </p>
         </motion.div>
 

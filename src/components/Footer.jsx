@@ -87,9 +87,6 @@ const Footer = () => {
           <p>
             &copy; {new Date().getFullYear()} DGA Producciones. Todos los derechos reservados.
           </p>
-          <p className="footer-credits">
-            Hecho con <FaHeart className="heart-icon" /> por Maia & Guille
-          </p>
         </div>
       </div>
     </footer>

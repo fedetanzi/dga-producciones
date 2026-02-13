@@ -1,25 +1,37 @@
-import React from 'react'
+import React, { useRef } from 'react'
 import { motion } from 'framer-motion'
 import { useInView } from 'framer-motion'
-import { useRef } from 'react'
 import './FeaturedCases.css'
 
 const FeaturedCases = () => {
   const ref = useRef(null)
   const isInView = useInView(ref, { once: true, margin: "-100px" })
+  const scrollRef = useRef(null)
 
   const featuredCases = [
     {
-      title: "Wonderland",
-      description: "Un evento mágico que transportó a los invitados a un mundo de fantasía y elegancia. Producción integral con ambientación temática de lujo.",
-      details: ["300+ invitados", "Ambientación inmersiva", "Experiencia 360°"],
-      image: "wonderland"
+      title: "Boda de ensueño",
+      description: "Celebración íntima en hotel lujoso, ambientación con ultima tecnología",
+      tags: ["300+ invitados", "ambientación inmersiva", "experiencia 360"],
+      image: "https://images.unsplash.com/photo-1519741497674-611481863552?q=80&w=800"
     },
     {
-      title: "Boda de Ensueño",
-      description: "Celebración íntima en viñedo privado con diseño floral excepcional y experiencia gastronómica de autor.",
-      details: ["Ceremonia al atardecer", "Diseño floral exclusivo", "Gastronomía premium"],
-      image: "wedding"
+      title: "Boda de ensueño",
+      description: "Celebración íntima en hotel lujoso, ambientación con ultima tecnología",
+      tags: ["300+ invitados", "ambientación inmersiva", "experiencia 360"],
+      image: "https://images.unsplash.com/photo-1606800052052-a08af7148866?q=80&w=800"
+    },
+    {
+      title: "Boda de ensueño",
+      description: "Celebración íntima en hotel lujoso, ambientación con ultima tecnología",
+      tags: ["300+ invitados", "ambientación inmersiva", "experiencia 360"],
+      image: "https://images.unsplash.com/photo-1511578314322-379afb476865?q=80&w=800"
+    },
+    {
+      title: "Boda de ensueño",
+      description: "Celebración íntima en hotel lujoso, ambientación con ultima tecnología",
+      tags: ["300+ invitados", "ambientación inmersiva", "experiencia 360"],
+      image: "https://images.unsplash.com/photo-1464366400600-7168b8af9bc3?q=80&w=800"
     }
   ]
 
@@ -32,34 +44,36 @@ const FeaturedCases = () => {
           transition={{ duration: 0.6 }}
         >
           <h2 className="section-title">Casos Destacados</h2>
-          <p className="section-subtitle">
-            Eventos que marcaron la diferencia
-          </p>
         </motion.div>
 
-        <div className="featured-grid">
-          {featuredCases.map((item, index) => (
-            <motion.div
-              key={index}
-              className="featured-card"
-              initial={{ opacity: 0, y: 50 }}
-              animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 50 }}
-              transition={{ duration: 0.6, delay: index * 0.2 }}
-            >
-              <div className={`featured-image ${item.image}`}>
-                {/* Placeholder for featured case image */}
-              </div>
-              <div className="featured-content">
-                <h3>{item.title}</h3>
-                <p>{item.description}</p>
-                <ul className="featured-details">
-                  {item.details.map((detail, i) => (
-                    <li key={i}>{detail}</li>
-                  ))}
-                </ul>
-              </div>
-            </motion.div>
-          ))}
+        <div className="slider-wrapper">
+          <div className="slider-container" ref={scrollRef}>
+            {featuredCases.map((item, index) => (
+              <motion.div
+                key={index}
+                className="case-card"
+                initial={{ opacity: 0, x: 50 }}
+                animate={isInView ? { opacity: 1, x: 0 } : { opacity: 0, x: 50 }}
+                transition={{ duration: 0.6, delay: index * 0.15 }}
+              >
+                <div 
+                  className="case-image"
+                  style={{ backgroundImage: `url(${item.image})` }}
+                >
+                  <div className="case-overlay"></div>
+                </div>
+                <div className="case-content">
+                  <h3>{item.title}</h3>
+                  <p>{item.description}</p>
+                  <div className="case-tags">
+                    {item.tags.map((tag, i) => (
+                      <span key={i} className="tag">{tag}</span>
+                    ))}
+                  </div>
+                </div>
+              </motion.div>
+            ))}
+          </div>
         </div>
       </div>
     </section>

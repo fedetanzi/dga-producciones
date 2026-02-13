@@ -1,0 +1,28 @@
+.star-decoration {
+  position: absolute;
+  color: var(--color-accent);
+  opacity: 0.7;
+  pointer-events: none;
+  z-index: 3;
+  filter: drop-shadow(0 0 8px rgba(176, 132, 255, 0.6));
+}
+
+.star-1 {
+  animation-delay: 0s;
+}
+
+.star-2 {
+  animation-delay: 0.5s;
+}
+
+.star-3 {
+  animation-delay: 1s;
+}
+
+.star-4 {
+  animation-delay: 1.5s;
+}
+
+.star-5 {
+  animation-delay: 2s;
+}

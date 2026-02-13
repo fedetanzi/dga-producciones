@@ -1,22 +1,29 @@
 .portfolio {
   background-color: var(--color-bg-dark);
   position: relative;
+  padding: var(--spacing-xl) 0;
+}
+
+.portfolio .section-title {
+  text-transform: lowercase;
+}
+
+.portfolio .section-title::after {
+  display: none;
 }
 
 .portfolio-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  gap: 2rem;
-  margin-top: 4rem;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 0;
+  margin-top: var(--spacing-lg);
 }
 
 .portfolio-item {
   position: relative;
-  height: 400px;
+  height: 350px;
   cursor: pointer;
   overflow: hidden;
-  border-radius: 2px;
-  box-shadow: var(--shadow-sm);
 }
 
 .portfolio-image {
@@ -24,16 +31,8 @@
   height: 100%;
   background-size: cover;
   background-position: center;
-  transition: transform 0.5s ease;
-  position: relative;
-}
-
-.portfolio-image::after {
-  content: '';
-  position: absolute;
-  inset: 0;
-  background: linear-gradient(to top, rgba(10, 31, 31, 0.8), transparent 60%);
-  transition: opacity 0.3s ease;
+  transition: transform 0.4s ease, filter 0.4s ease;
+  filter: brightness(0.9);
 }
 
 .portfolio-overlay {
@@ -42,14 +41,20 @@
   left: 0;
   right: 0;
   bottom: 0;
-  background: linear-gradient(to top, rgba(10, 31, 31, 0.95) 0%, rgba(13, 27, 30, 0.7) 60%, transparent 100%);
+  background: rgba(10, 10, 10, 0.7);
   display: flex;
-  flex-direction: column;
-  justify-content: flex-end;
-  padding: 2rem;
+  align-items: center;
+  justify-content: center;
   opacity: 0;
-  transition: opacity 0.4s ease;
-  backdrop-filter: blur(5px);
+  transition: opacity 0.3s ease;
+}
+
+.portfolio-overlay span {
+  color: var(--color-accent);
+  font-size: 1rem;
+  font-weight: 500;
+  text-transform: lowercase;
+  letter-spacing: 0.05em;
 }
 
 .portfolio-item:hover .portfolio-overlay {
@@ -57,140 +62,22 @@
 }
 
 .portfolio-item:hover .portfolio-image {
-  transform: scale(1.1);
+  transform: scale(1.05);
+  filter: brightness(1);
 }
 
-.portfolio-overlay h3 {
-  color: var(--color-bg);
-  font-size: 1.5rem;
-  margin-bottom: 0.5rem;
-}
-
-.portfolio-overlay p {
-  color: var(--color-secondary);
-  font-size: 1rem;
-}
-
-/* Lightbox */
-.lightbox {
-  position: fixed;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background-color: rgba(0, 0, 0, 0.95);
-  z-index: 2000;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  padding: 2rem;
-}
-
-.lightbox-content {
-  max-width: 1200px;
-  max-height: 90vh;
-  background-color: var(--color-bg);
-  border-radius: 2px;
-  overflow: hidden;
-  box-shadow: var(--shadow-lg);
-}
-
-.lightbox-image {
-  width: 100%;
-  height: 70vh;
-  background-size: contain;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-color: var(--color-bg-dark);
-}
-
-.lightbox-info {
-  padding: 2rem;
-  text-align: center;
-}
-
-.lightbox-info h3 {
-  font-size: 2rem;
-  margin-bottom: 0.5rem;
-}
-
-.lightbox-info p {
-  color: var(--color-text-light);
-  font-size: 1.1rem;
-}
-
-.lightbox-close,
-.lightbox-prev,
-.lightbox-next {
-  position: absolute;
-  background-color: rgba(255, 255, 255, 0.1);
-  backdrop-filter: blur(10px);
-  border: 2px solid rgba(255, 255, 255, 0.3);
-  color: var(--color-bg);
-  font-size: 1.5rem;
-  width: 50px;
-  height: 50px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  cursor: pointer;
-  transition: var(--transition);
-  border-radius: 50%;
-}
-
-.lightbox-close {
-  top: 2rem;
-  right: 2rem;
-}
-
-.lightbox-prev {
-  left: 2rem;
-  top: 50%;
-  transform: translateY(-50%);
-}
-
-.lightbox-next {
-  right: 2rem;
-  top: 50%;
-  transform: translateY(-50%);
-}
-
-.lightbox-close:hover,
-.lightbox-prev:hover,
-.lightbox-next:hover {
-  background-color: rgba(255, 255, 255, 0.2);
-  border-color: var(--color-secondary);
-  color: var(--color-secondary);
+@media (max-width: 1024px) {
+  .portfolio-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
 }
 
 @media (max-width: 768px) {
   .portfolio-grid {
     grid-template-columns: 1fr;
-    gap: 1.5rem;
   }
 
   .portfolio-item {
-    height: 300px;
-  }
-
-  .lightbox-close,
-  .lightbox-prev,
-  .lightbox-next {
-    width: 40px;
-    height: 40px;
-    font-size: 1.2rem;
-  }
-
-  .lightbox-close {
-    top: 1rem;
-    right: 1rem;
-  }
-
-  .lightbox-prev {
-    left: 1rem;
-  }
-
-  .lightbox-next {
-    right: 1rem;
+    height: 280px;
   }
 }
