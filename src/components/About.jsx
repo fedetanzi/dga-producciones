@@ -17,7 +17,7 @@ const About = () => {
           animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 50 }}
           transition={{ duration: 0.8 }}
         >
-          <h2 className="section-title">¿quiénes somos?</h2>
+          <h2 className="section-title">¿Quiénes somos?</h2>
           <div className="about-text-wrapper">
             <p>
               Somos una productora integral de eventos 360°.

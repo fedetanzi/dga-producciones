@@ -24,7 +24,7 @@ const Hero = () => {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 1, delay: 0.2 }}
         >
-          Producción integral de eventos de alto impacto
+          PRODUCCIÓN INTEGRAL DE EVENTOS DE ALTO IMPACTO
         </motion.h1>
         
         <motion.p
@@ -48,7 +48,7 @@ const Hero = () => {
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
           >
-            Planificar mi evento
+            PLANIFICAR MI EVENTO
           </motion.button>
         </motion.div>
 

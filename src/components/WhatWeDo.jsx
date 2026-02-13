@@ -35,7 +35,7 @@ const WhatWeDo = () => {
           animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 30 }}
           transition={{ duration: 0.6 }}
         >
-          <h2 className="section-title">hacemos que las ideas se conviertan en experiencias inolvidables</h2>
+          <h2 className="section-title">Hacemos que las ideas se conviertan en experiencias inolvidables</h2>
         </motion.div>
 
         <div className="blocks-grid">

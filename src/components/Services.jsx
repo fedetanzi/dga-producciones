@@ -27,7 +27,7 @@ const Services = () => {
           animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 30 }}
           transition={{ duration: 0.6 }}
         >
-          <h2 className="section-title">nuestros servicios</h2>
+          <h2 className="section-title">Nuestros servicios</h2>
         </motion.div>
 
         <div className="services-list">

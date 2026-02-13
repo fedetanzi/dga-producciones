@@ -28,7 +28,7 @@ const Portfolio = () => {
           animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 30 }}
           transition={{ duration: 0.6 }}
         >
-          <h2 className="section-title">portfolio</h2>
+          <h2 className="section-title">Portfolio</h2>
         </motion.div>
 
         <div className="portfolio-grid">

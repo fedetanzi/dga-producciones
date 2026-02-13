@@ -50,7 +50,7 @@ const WorkProcess = () => {
           animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 30 }}
           transition={{ duration: 0.6 }}
         >
-          <h2 className="section-title">nuestro proceso</h2>
+          <h2 className="section-title">Nuestro proceso</h2>
           <p className="section-subtitle">
             5 pasos hacia la perfección
           </p>
