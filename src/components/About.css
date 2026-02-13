@@ -11,7 +11,7 @@
 }
 
 .about .section-title {
-  text-transform: lowercase;
+  text-transform: capitalize;
   margin-bottom: var(--spacing-lg);
   color: var(--color-text-dark);
   font-weight: 500;

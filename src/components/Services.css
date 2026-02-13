@@ -5,7 +5,7 @@
 }
 
 .services .section-title {
-  text-transform: lowercase;
+  text-transform: capitalize;
   color: var(--color-text-dark);
   font-weight: 500;
 }

@@ -5,7 +5,7 @@
 }
 
 .portfolio .section-title {
-  text-transform: lowercase;
+  text-transform: capitalize;
 }
 
 .portfolio .section-title::after {

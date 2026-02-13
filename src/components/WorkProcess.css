@@ -5,7 +5,7 @@
 }
 
 .work-process .section-title {
-  text-transform: lowercase;
+  text-transform: capitalize;
 }
 
 .process-timeline {
