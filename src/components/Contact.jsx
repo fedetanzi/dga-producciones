@@ -84,60 +84,6 @@ const Contact = () => {
         </motion.div>
 
         <div className="contact-grid">
-          <motion.div
-            className="contact-info"
-            initial={{ opacity: 0, x: -30 }}
-            animate={isInView ? { opacity: 1, x: 0 } : { opacity: 0, x: -30 }}
-            transition={{ duration: 0.6, delay: 0.2 }}
-          >
-            <h3>Hablemos</h3>
-            <p>
-              Estamos aquí para escuchar tu visión y convertirla en realidad. Contáctanos para una consulta personalizada.
-            </p>
-
-            <div className="contact-details">
-              <div className="contact-item">
-                <FaMapMarkerAlt />
-                <span>Buenos Aires, Argentina</span>
-              </div>
-              <div className="contact-item">
-                <FaEnvelope />
-                <a href="mailto:dgaproducciones@hotmail.com">dgaproducciones@hotmail.com</a>
-              </div>
-              <div className="contact-item">
-                <FaPhone />
-                <a href="tel:+5491155672305">1155672305</a>
-              </div>
-            </div>
-
-            <div className="social-links">
-              <a 
-                href="https://wa.me/5491155672305" 
-                target="_blank" 
-                rel="noopener noreferrer"
-                aria-label="WhatsApp"
-              >
-                <FaWhatsapp />
-              </a>
-              <a 
-                href="https://instagram.com/dgaproducciones" 
-                target="_blank" 
-                rel="noopener noreferrer"
-                aria-label="Instagram"
-              >
-                <FaInstagram />
-              </a>
-              <a 
-                href="https://tiktok.com/@dgaproducciones" 
-                target="_blank" 
-                rel="noopener noreferrer"
-                aria-label="TikTok"
-              >
-                <FaTiktok />
-              </a>
-            </div>
-          </motion.div>
-
           <motion.form
             className="contact-form"
             onSubmit={handleSubmit}
@@ -252,6 +198,60 @@ const Contact = () => {
               {submitted ? 'Mensaje Enviado ✓' : 'Solicitar propuesta'}
             </button>
           </motion.form>
+
+          <motion.div
+            className="contact-info"
+            initial={{ opacity: 0, y: 30 }}
+            animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 30 }}
+            transition={{ duration: 0.6, delay: 0.4 }}
+          >
+            <h3>Hablemos</h3>
+            <p>
+              Estamos aquí para escuchar tu visión y convertirla en realidad. Contáctanos para una consulta personalizada.
+            </p>
+
+            <div className="contact-details">
+              <div className="contact-item">
+                <FaMapMarkerAlt />
+                <span>Buenos Aires, Argentina</span>
+              </div>
+              <div className="contact-item">
+                <FaEnvelope />
+                <a href="mailto:dgaproducciones@hotmail.com">dgaproducciones@hotmail.com</a>
+              </div>
+              <div className="contact-item">
+                <FaPhone />
+                <a href="tel:+5491155672305">1155672305</a>
+              </div>
+            </div>
+
+            <div className="social-links">
+              <a 
+                href="https://wa.me/5491155672305" 
+                target="_blank" 
+                rel="noopener noreferrer"
+                aria-label="WhatsApp"
+              >
+                <FaWhatsapp />
+              </a>
+              <a 
+                href="https://instagram.com/dgaproducciones" 
+                target="_blank" 
+                rel="noopener noreferrer"
+                aria-label="Instagram"
+              >
+                <FaInstagram />
+              </a>
+              <a 
+                href="https://tiktok.com/@dgaproducciones" 
+                target="_blank" 
+                rel="noopener noreferrer"
+                aria-label="TikTok"
+              >
+                <FaTiktok />
+              </a>
+            </div>
+          </motion.div>
         </div>
       </div>
     </section>
