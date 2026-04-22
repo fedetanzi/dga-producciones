@@ -1,6 +1,5 @@
 import React from 'react'
 import { motion } from 'framer-motion'
-import { FaChevronDown } from 'react-icons/fa'
 import './Hero.css'
 
 const Hero = () => {
@@ -15,25 +14,36 @@ const Hero = () => {
     <section className="hero" id="hero">
       <div className="hero-background">
         <div className="hero-overlay"></div>
-        <div className="hero-image"></div>
       </div>
       
       <div className="hero-content">
+        <motion.div
+          className="hero-tagline"
+          initial={{ opacity: 0, y: 30 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8, delay: 0.2 }}
+        >
+          • LIVE PRODUCTION EXCELLENCE
+        </motion.div>
+
         <motion.h1
           initial={{ opacity: 0, y: 50 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 1, delay: 0.2 }}
+          transition={{ duration: 1, delay: 0.5 }}
         >
-          PRODUCCIÓN INTEGRAL DE EVENTOS DE ALTO IMPACTO
+          INGENIERÍA DE{' '}
+          <span className="hero-highlight">MOMENTOS</span>{' '}
+          INOLVIDABLES
         </motion.h1>
         
         <motion.p
-          className="hero-subtitle"
+          className="hero-description"
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 1 }}
         >
-          sociales • corporativos • masivos
+          Desde la concepción creativa hasta la ejecución técnica,
+          transformamos espacios en experiencias sensoriales.
         </motion.p>
 
         <motion.div 
@@ -42,37 +52,12 @@ const Hero = () => {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 1.3 }}
         >
-          <motion.button 
-            className="btn btn-primary"
+          <button 
+            className="btn-hero-primary"
             onClick={() => scrollToSection('contact')}
-            whileHover={{ scale: 1.05 }}
-            whileTap={{ scale: 0.95 }}
           >
-            PLANIFICAR MI EVENTO
-          </motion.button>
-        </motion.div>
-
-        <motion.div
-          className="scroll-indicator"
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          transition={{ duration: 1, delay: 1.5 }}
-          onClick={() => scrollToSection('services')}
-        >
-          <motion.div
-            animate={{
-              y: [0, 10, 0],
-              scale: [1, 1.1, 1]
-            }}
-            transition={{
-              duration: 1.5,
-              repeat: Infinity,
-              ease: 'easeInOut'
-            }}
-          >
-            <FaChevronDown />
-          </motion.div>
-          <span>Descubre más</span>
+            INICIA TU PROYECTO
+          </button>
         </motion.div>
       </div>
     </section>

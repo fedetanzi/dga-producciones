@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react'
+import Header from './components/Header'
 import Hero from './components/Hero'
 import WhatWeDo from './components/WhatWeDo'
 import FeaturedCases from './components/FeaturedCases'
@@ -24,6 +25,7 @@ function App() {
 
   return (
     <div className="App">
+      <Header />
       <main>
         <Hero />
         <WhatWeDo />

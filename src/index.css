@@ -7,14 +7,14 @@
 }
 
 :root {
-  /* Paleta de colores minimalista */
+  /* Paleta de colores según el diseño de referencia */
   --color-primary: #0a0a0a; /* Negro */
-  --color-secondary: #8B1538; /* Bordó profundo */
+  --color-secondary: #8B1538; /* Bordó/Rojo oscuro */
   --color-accent: #FFFFFF; /* Blanco */
   --color-bg: #1a1a1a; /* Gris muy oscuro */
   --color-bg-dark: #0a0a0a; /* Negro */
   --color-bg-light: #f5f5f5; /* Gris claro muy suave */
-  --color-bg-card: rgba(139, 21, 56, 0.05);
+  --color-bg-card: rgba(26, 26, 26, 1);
   --color-text: #FFFFFF;
   --color-text-light: #c0c0c0;
   --color-text-dark: #0a0a0a;
@@ -32,9 +32,9 @@
   --spacing-xl: 6rem;
   
   /* Border radius minimalista */
-  --border-radius-sm: 4px;
-  --border-radius-md: 8px;
-  --border-radius-lg: 12px;
+  --border-radius-sm: 0px;
+  --border-radius-md: 0px;
+  --border-radius-lg: 0px;
   
   /* Transiciones */
   --transition: all 0.3s ease;
