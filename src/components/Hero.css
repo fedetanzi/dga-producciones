@@ -39,11 +39,37 @@
 }
 
 .hero-tagline {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.55rem;
   font-size: 0.85rem;
   font-weight: 500;
   color: #8B1538;
   letter-spacing: 0.15em;
   margin-bottom: 2rem;
+}
+
+.hero-live-dot {
+  width: 0.55rem;
+  height: 0.55rem;
+  border-radius: 50%;
+  background: #ff2d55;
+  box-shadow: 0 0 0 rgba(255, 45, 85, 0.7);
+  animation: liveBlink 1.2s ease-in-out infinite;
+}
+
+@keyframes liveBlink {
+  0%,
+  100% {
+    opacity: 1;
+    transform: scale(1);
+    box-shadow: 0 0 0 0 rgba(255, 45, 85, 0.5);
+  }
+  50% {
+    opacity: 0.35;
+    transform: scale(0.85);
+    box-shadow: 0 0 0 0.35rem rgba(255, 45, 85, 0);
+  }
 }
 
 .hero h1 {
