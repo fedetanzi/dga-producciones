@@ -11,28 +11,23 @@ const WorkProcess = () => {
   const steps = [
     {
       number: "01",
-      title: "CONSULTA INICIAL",
-      description: "Conocemos tu visión y objetivos. Analizamos cada variable para sentar las bases de lo que será una experiencia inolvidable."
+      title: "CONSULTA & CONCEPTO",
+      description: "Entendemos tu vision. Nos reunimos, te escuchamos y co-creamos la idea central del evento."
     },
     {
       number: "02",
-      title: "CONCEPTUALIZACIÓN",
-      description: "Creamos un concepto único y personalizado. No replicamos moldes; inventamos estéticas que responden a tu identidad."
+      title: "DISENO & VISUALIZACION",
+      description: "Lo ves antes de que exista. Renders 3D, planimetria y branding para aprobar cada detalle."
     },
     {
       number: "03",
-      title: "PLANIFICACIÓN DETALLADA",
-      description: "Diseñamos cada aspecto técnico, estético y logístico. Planos que convierten conceptos en realidades ejecutables."
+      title: "PRODUCCION",
+      description: "Cada pieza en su lugar. Coordinamos proveedores, logistica y todos los componentes con equipo dedicado."
     },
     {
       number: "04",
-      title: "PRODUCCIÓN Y MONTAJE",
-      description: "Ejecutamos cada detalle con precisión. Un despliegue técnico donde el rigor y el arte convergen en tiempo real."
-    },
-    {
-      number: "05",
-      title: "EXPERIENCIA Y CIERRE",
-      description: "Garantizamos que todo fluya perfectamente. Nuestra labor termina solo cuando el último invitado se retira conmovido."
+      title: "EJECUCION & CIERRE",
+      description: "Vos solo disfrutas. Montaje, coordinacion en vivo y desmontaje sin que muevas un dedo."
     }
   ]
 
@@ -47,13 +42,13 @@ const WorkProcess = () => {
             transition={{ duration: 0.6 }}
           >
             <h2 className="process-main-title">
-              MÉTODO{' '}
-              <span className="process-highlight">GUILLO</span>
+              METODO{' '}
+              <span className="process-highlight">DGA</span>
             </h2>
             <div className="process-underline"></div>
             <p className="process-description">
-              Transformamos una idea abstracta en una realidad física 
-              y emocional a través de un proceso riguroso de diseño y técnica.
+              Asi creamos tu experiencia: una metodologia clara para transformar 
+              ideas en eventos memorables con precision operativa.
             </p>
           </motion.div>
 

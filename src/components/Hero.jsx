@@ -24,7 +24,7 @@ const Hero = () => {
           transition={{ duration: 0.8, delay: 0.2 }}
         >
           <span className="hero-live-dot" aria-hidden="true"></span>
-          LIVE PRODUCTION EXCELLENCE
+          PRODUCTORA INTEGRAL DE EVENTOS
         </motion.div>
 
         <motion.h1
@@ -32,7 +32,7 @@ const Hero = () => {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 1, delay: 0.5 }}
         >
-          INGENIERÍA DE{' '}
+          INGENIERIA DE{' '}
           <span className="hero-highlight">MOMENTOS</span>{' '}
           INOLVIDABLES
         </motion.h1>
@@ -43,8 +43,7 @@ const Hero = () => {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 1 }}
         >
-          Desde la concepción creativa hasta la ejecución técnica,
-          transformamos espacios en experiencias sensoriales.
+          Diseño, precision y ejecucion total.
         </motion.p>
 
         <motion.div 
@@ -57,7 +56,13 @@ const Hero = () => {
             className="btn-hero-primary"
             onClick={() => scrollToSection('contact')}
           >
-            INICIA TU PROYECTO
+            INICIAR MI EVENTO
+          </button>
+          <button
+            className="btn-hero-secondary"
+            onClick={() => scrollToSection('proyectos')}
+          >
+            VER PROYECTOS
           </button>
         </motion.div>
       </div>

@@ -126,6 +126,26 @@
   box-shadow: 0 5px 20px rgba(139, 21, 56, 0.4);
 }
 
+.btn-hero-secondary {
+  background: transparent;
+  color: #f0f0f0;
+  border: 1px solid rgba(240, 240, 240, 0.45);
+  padding: 1.2rem 3rem;
+  font-size: 1rem;
+  font-weight: 600;
+  letter-spacing: 0.05em;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  white-space: nowrap;
+  text-transform: uppercase;
+}
+
+.btn-hero-secondary:hover {
+  color: #ffffff;
+  border-color: #ffffff;
+  transform: translateY(-2px);
+}
+
 @media (max-width: 768px) {
   .hero {
     padding-top: 120px;
@@ -148,6 +168,11 @@
   }
 
   .btn-hero-primary {
+    width: 100%;
+    max-width: 350px;
+  }
+
+  .btn-hero-secondary {
     width: 100%;
     max-width: 350px;
   }

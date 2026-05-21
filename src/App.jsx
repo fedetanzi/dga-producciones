@@ -3,10 +3,8 @@ import Header from './components/Header'
 import Hero from './components/Hero'
 import WhatWeDo from './components/WhatWeDo'
 import FeaturedCases from './components/FeaturedCases'
-import Services from './components/Services'
 import WorkProcess from './components/WorkProcess'
 import About from './components/About'
-import CTA from './components/CTA'
 import Contact from './components/Contact'
 import Footer from './components/Footer'
 import './App.css'
@@ -29,10 +27,8 @@ function App() {
         <Hero />
         <WhatWeDo />
         <FeaturedCases />
-        <Services />
         <WorkProcess />
         <About />
-        <CTA />
         <Contact />
       </main>
       <Footer />

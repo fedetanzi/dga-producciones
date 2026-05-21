@@ -10,40 +10,40 @@ const Services = () => {
 
   const services = [
     {
-      title: "PRODUCCIÓN INTEGRAL DE EVENTOS",
-      description: "Ejecución total 360° con estándares internacionales de calidad.",
+      title: "CASAMIENTOS",
+      description: "Produccion integral para bodas con diseno, tecnica y coordinacion total en el gran dia.",
       image: "https://images.unsplash.com/photo-1492684223066-81342ee5ff30?q=80&w=800",
-      tags: ["RESULTADOS", "PRECISIÓN"]
+      tags: ["SOCIAL", "PRODUCCION"]
     },
     {
-      title: "DISEÑO DE AMBIENTACIONES",
-      description: "Escenografías que cuentan historias y capturan la esencia de la marca.",
+      title: "BAR & BAT MITZVAH",
+      description: "Experiencias personalizadas con identidad propia, renders previos y una puesta memorable.",
       image: "https://images.unsplash.com/photo-1478146896981-b80fe463b330?q=80&w=800",
-      tags: ["CREATIVIDAD", "PRECISIÓN"]
+      tags: ["CUSTOM", "IDENTIDAD"]
     },
     {
-      title: "RENDERIZADO Y PLANOS TÉCNICOS",
-      description: "Previsualización fotorrealista para una planificación sin fallas.",
+      title: "FIESTAS DE 15",
+      description: "Conceptos unicos para celebrar a lo grande: ambientacion, branding y direccion de experiencia.",
       image: "https://images.unsplash.com/photo-1503387762-592deb58ef4e?q=80&w=800",
-      tags: ["PRECISIÓN", "VISIÓN"]
+      tags: ["JUVENTUD", "SHOW"]
     },
     {
-      title: "SONIDO, ILUMINACIÓN Y LED",
-      description: "Tecnología de punta para una experiencia sensorial inmersiva.",
+      title: "CORPORATIVOS",
+      description: "Lanzamientos, convenciones y eventos de marca con enfoque premium y ejecucion impecable.",
       image: "https://images.unsplash.com/photo-1470229722913-7c0e2dbbafd3?q=80&w=800",
-      tags: ["POTENCIA", "RESULTADOS"]
+      tags: ["MARCA", "RESULTADOS"]
     },
     {
-      title: "ESCENARIOS Y ESTRUCTURAS",
-      description: "Montajes seguros y audaces que desafían la arquitectura convencional.",
+      title: "FIESTAS & SHOWS",
+      description: "Sonido, iluminacion, LED, escenarios y estructuras para eventos de alto impacto.",
       image: "https://images.unsplash.com/photo-1533174072545-7a4b6ad7a6c3?q=80&w=800",
-      tags: ["RIGOR", "CREATIVIDAD"]
+      tags: ["ENERGIA", "TECNICA"]
     },
     {
-      title: "COORDINACIÓN Y GESTIÓN",
-      description: "Liderazgo operativo y gestión de proveedores estratégicos.",
+      title: "PROVEEDORES & ALIANZAS",
+      description: "Red consolidada de partners para asegurar calidad en cada rubro de tu evento.",
       image: "https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?q=80&w=800",
-      tags: ["CONTROL", "EXCELENCIA"]
+      tags: ["RED DGA", "COORDINACION"]
     }
   ]
 
@@ -56,10 +56,10 @@ const Services = () => {
           animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 30 }}
           transition={{ duration: 0.6 }}
         >
-          <div className="services-tagline">NUESTRA EXPERTICIA</div>
+          <div className="services-tagline">QUE PRODUCIMOS</div>
           <h2 className="section-title">
-            SERVICIOS DE{' '}
-            <span className="services-highlight">ALTA FIDELIDAD</span>
+            CUBRIMOS{' '}
+            <span className="services-highlight">CADA CELEBRACION</span>
           </h2>
         </motion.div>
 

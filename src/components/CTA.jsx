@@ -24,14 +24,14 @@ const CTA = () => {
           animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 50 }}
           transition={{ duration: 0.8 }}
         >
-          <h2>El nivel de tu evento empieza por la producción.</h2>
+          <h2>Tu proximo momento nos espera.</h2>
           <motion.button
             className="btn btn-primary"
             onClick={scrollToContact}
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
           >
-            Solicitar propuesta
+            Agendar reunion
           </motion.button>
         </motion.div>
       </div>

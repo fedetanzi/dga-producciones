@@ -12,21 +12,21 @@ const Testimonials = () => {
 
   const testimonials = [
     {
-      name: "María González",
-      event: "Boda",
-      text: "DGA Producciones transformó nuestra boda en un sueño hecho realidad. Cada detalle fue perfecto, superando todas nuestras expectativas. El profesionalismo y la dedicación de Maia y Guille fueron excepcionales.",
+      name: "Valentina & Marcos",
+      event: "Casamiento · 250 personas",
+      text: "No tuvimos que preocuparnos por absolutamente nada. El dia de nuestra boda nos dedicamos a celebrar mientras el equipo de DGA se encargo de todo. Supero lo que habiamos imaginado.",
       rating: 5
     },
     {
-      name: "Carlos Mendoza",
-      event: "Evento Corporativo",
-      text: "La producción de nuestro evento anual fue impecable. La atención al detalle y la coordinación logística fueron de primer nivel. Altamente recomendados para eventos corporativos de alto perfil.",
+      name: "Carolina Perez",
+      event: "Directora de Marketing · Nexo Brand",
+      text: "Como marca necesitabamos un lanzamiento que se sintiera premium. DGA entendio la identidad desde el primer dia y diseno una experiencia que nuestros clientes todavia recuerdan.",
       rating: 5
     },
     {
-      name: "Sofía Martínez",
-      event: "Celebración Premium",
-      text: "Trabajar con DGA fue una experiencia maravillosa. Su creatividad y capacidad para materializar nuestra visión fue sorprendente. Un equipo verdaderamente profesional.",
+      name: "Marcela Gutierrez",
+      event: "Fiesta de 15 de Renata · 320 personas",
+      text: "Mi hija queria algo unico y diferente. DGA no solo cumplio, sino que nos sorprendio en cada etapa. El branding personalizado hizo que todo se sintiera coherente y especial.",
       rating: 5
     }
   ]
@@ -40,16 +40,16 @@ const Testimonials = () => {
   }
 
   return (
-    <section className="testimonials" id="testimonials" ref={ref}>
+    <section className="testimonials" id="experiencias" ref={ref}>
       <div className="container">
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 30 }}
           transition={{ duration: 0.6 }}
         >
-          <h2 className="section-title">Testimonios</h2>
+          <h2 className="section-title">Experiencias que hablan.</h2>
           <p className="section-subtitle">
-            La satisfacción de nuestros clientes nos inspira
+            Lo que dicen quienes ya vivieron un evento DGA
           </p>
         </motion.div>
 

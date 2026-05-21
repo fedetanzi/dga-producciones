@@ -12,30 +12,31 @@ const WhatWeDo = () => {
   const blocks = [
     {
       icon: <FaLightbulb />,
-      title: "Producción integral",
-      description: "Desde el concepto hasta el último minuto del evento."
+      title: "Diseño desde cero",
+      description: "Nos reunimos con vos, entendemos tu vision y creamos el concepto completo del evento. Renders, planos y branding antes de confirmar."
     },
     {
       icon: <FaVideo />,
-      title: "Equipamiento de última generación",
-      description: "Sonido, pantallas, luces, estructuras y escenarios con tecnología líder en el mercado."
+      title: "Visualizacion avanzada",
+      description: "Vas a ver tu evento terminado antes de que suceda: renders 3D, maquetas digitales y planimetria detallada para evitar sorpresas."
     },
     {
       icon: <FaUsers />,
-      title: "Coordinación total en vivo",
-      description: "Un equipo completo asegurando que todo fluya perfecto mientras vos disfrutás."
+      title: "Ejecucion sin fisuras",
+      description: "Un equipo dedicado exclusivamente a tu evento. Montaje, coordinacion en vivo y desmontaje para que vos solo lo vivas."
     }
   ]
 
   return (
-    <section className="what-we-do" id="what-we-do" ref={ref}>
+    <section className="what-we-do" id="diferencial" ref={ref}>
       <div className="container">
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 30 }}
           transition={{ duration: 0.6 }}
         >
-          <h2 className="section-title">Hacemos que las ideas se conviertan en experiencias inolvidables</h2>
+          <p className="section-subtitle">POR QUE DGA</p>
+          <h2 className="section-title">Hacemos todo. En serio, todo.</h2>
         </motion.div>
 
         <div className="blocks-grid">

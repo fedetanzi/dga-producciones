@@ -34,14 +34,17 @@ const Header = () => {
         </div>
 
         <nav className="header-nav">
+          <a href="#proyectos" onClick={(e) => { e.preventDefault(); scrollToSection('proyectos'); }}>
+            PROYECTOS
+          </a>
           <a href="#services" onClick={(e) => { e.preventDefault(); scrollToSection('services'); }}>
-            SERVICES
+            SERVICIOS
           </a>
           <a href="#process" onClick={(e) => { e.preventDefault(); scrollToSection('process'); }}>
-            PROCESS
+            PROCESO
           </a>
           <a href="#contact" onClick={(e) => { e.preventDefault(); scrollToSection('contact'); }}>
-            CONTACT
+            CONTACTO
           </a>
         </nav>
 
@@ -49,7 +52,7 @@ const Header = () => {
           className="header-cta"
           onClick={() => scrollToSection('contact')}
         >
-          INICIA TU PROYECTO
+          AGENDAR REUNION
         </button>
       </div>
     </motion.header>
