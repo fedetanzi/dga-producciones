@@ -1,73 +1,25 @@
-import React from 'react'
-import { motion } from 'framer-motion'
-import './Hero.css'
-
-const Hero = () => {
-  const scrollToSection = (sectionId) => {
-    const element = document.getElementById(sectionId)
-    if (element) {
-      element.scrollIntoView({ behavior: 'smooth' })
-    }
-  }
-
+export default function Hero() {
   return (
-    <section className="hero" id="hero">
-      <div className="hero-background">
-        <div className="hero-overlay"></div>
-      </div>
-      
+    <section id="hero">
+      <div className="hero-bg" />
+      <div className="hero-grid-lines" />
+      <div className="hero-orb" />
       <div className="hero-content">
-        <motion.div
-          className="hero-tagline"
-          initial={{ opacity: 0, y: 30 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, delay: 0.2 }}
-        >
-          <span className="hero-live-dot" aria-hidden="true"></span>
-          PRODUCTORA INTEGRAL DE EVENTOS
-        </motion.div>
-
-        <motion.h1
-          initial={{ opacity: 0, y: 50 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 1, delay: 0.5 }}
-        >
-          INGENIERIA DE{' '}
-          <span className="hero-highlight">MOMENTOS</span>{' '}
-          INOLVIDABLES
-        </motion.h1>
-        
-        <motion.p
-          className="hero-description"
-          initial={{ opacity: 0, y: 30 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, delay: 1 }}
-        >
-          Diseño, precision y ejecucion total.
-        </motion.p>
-
-        <motion.div 
-          className="hero-ctas"
-          initial={{ opacity: 0, y: 30 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, delay: 1.3 }}
-        >
-          <button 
-            className="btn-hero-primary"
-            onClick={() => scrollToSection('contact')}
-          >
-            INICIAR MI EVENTO
-          </button>
-          <button
-            className="btn-hero-secondary"
-            onClick={() => scrollToSection('proyectos')}
-          >
-            VER PROYECTOS
-          </button>
-        </motion.div>
+        <div className="hero-badge">Productora integral de eventos</div>
+        <h1 className="hero-title">
+          Ingeniería de<br />
+          <strong>momentos</strong>
+        </h1>
+        <p className="hero-subtitle">Diseño, precisión y ejecución total.</p>
+        <div className="hero-actions">
+          <a href="#contacto" className="btn-primary">Iniciar mi evento →</a>
+          <a href="#proyectos" className="btn-secondary">Ver proyectos</a>
+        </div>
+      </div>
+      <div className="hero-scroll-hint">
+        <span>Scroll</span>
+        <div className="scroll-line" />
       </div>
     </section>
   )
 }
-
-export default Hero
