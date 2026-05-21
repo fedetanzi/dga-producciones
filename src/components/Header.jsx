@@ -37,14 +37,8 @@ const Header = () => {
           <a href="#proyectos" onClick={(e) => { e.preventDefault(); scrollToSection('proyectos'); }}>
             PROYECTOS
           </a>
-          <a href="#services" onClick={(e) => { e.preventDefault(); scrollToSection('services'); }}>
-            SERVICIOS
-          </a>
           <a href="#process" onClick={(e) => { e.preventDefault(); scrollToSection('process'); }}>
             PROCESO
-          </a>
-          <a href="#contact" onClick={(e) => { e.preventDefault(); scrollToSection('contact'); }}>
-            CONTACTO
           </a>
         </nav>
 
