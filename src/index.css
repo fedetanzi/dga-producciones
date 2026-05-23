@@ -1562,10 +1562,11 @@ footer {
     position: fixed;
     top: 0;
     left: 0;
-    right: 0;
-    bottom: 0;
+    width: 100vw;
+    height: 100vh;
     background: rgba(250, 248, 245, 0.97);
     backdrop-filter: blur(24px);
+    -webkit-backdrop-filter: blur(24px);
     flex-direction: column;
     align-items: center;
     justify-content: center;
@@ -1573,9 +1574,13 @@ footer {
     transform: translateY(-100%);
     transition: transform 0.4s var(--transition);
     z-index: 99;
+    pointer-events: none;
   }
 
-  nav ul.nav-open { transform: translateY(0); }
+  nav ul.nav-open {
+    transform: translateY(0);
+    pointer-events: auto;
+  }
 
   nav ul a {
     font-size: 18px;
