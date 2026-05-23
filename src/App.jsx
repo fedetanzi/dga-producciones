@@ -13,20 +13,22 @@ import './App.css'
 
 export default function App() {
   return (
-    <div className="App">
+    <>
       <CustomCursor />
       <Header />
-      <main>
-        <Hero />
-        <StatsBar />
-        <Proyectos />
-        <Diferencial />
-        <Servicios />
-        <Proceso />
-        <Experiencias />
-        <CTA />
-      </main>
-      <Footer />
-    </div>
+      <div className="App">
+        <main>
+          <Hero />
+          <StatsBar />
+          <Proyectos />
+          <Diferencial />
+          <Servicios />
+          <Proceso />
+          <Experiencias />
+          <CTA />
+        </main>
+        <Footer />
+      </div>
+    </>
   )
 }
