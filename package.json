@@ -7,11 +7,18 @@
     "build": "vite build",
     "preview": "vite preview"
   },
-  "keywords": ["eventos", "luxury", "produccion", "events"],
+  "keywords": [
+    "eventos",
+    "luxury",
+    "produccion",
+    "events"
+  ],
   "author": "DGA Producciones",
   "license": "ISC",
   "description": "Sitio web premium para DGA Producciones - Eventos de lujo",
   "dependencies": {
+    "@vercel/analytics": "^2.0.1",
+    "@vercel/speed-insights": "^2.0.0",
     "framer-motion": "^12.23.24",
     "react": "^19.2.0",
     "react-dom": "^19.2.0",
