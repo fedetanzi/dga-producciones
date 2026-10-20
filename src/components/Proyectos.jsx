@@ -1,6 +1,6 @@
 import { useRef, useEffect } from 'react'
 
-const projects = Array.from({ length: 8 }, (_, i) => `/eventos/evento-0${i + 1}.jpg`)
+const projects = Array.from({ length: 8 }, (_, i) => `/eventos/evento-0${i + 1}.jpg`).reverse()
 
 export default function Proyectos() {
   const trackRef = useRef(null)
