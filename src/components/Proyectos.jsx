@@ -1,6 +1,6 @@
 import { useRef, useEffect } from 'react'
 
-const projects = Array.from({ length: 8 }, (_, i) => `/eventos/evento-0${i + 1}.jpg`).reverse()
+const projects = Array.from({ length: 10 }, (_, i) => `/eventos/evento-${String(i + 1).padStart(2, '0')}.jpg`)
 
 export default function Proyectos() {
   const trackRef = useRef(null)
@@ -24,7 +24,7 @@ export default function Proyectos() {
       <div className="projects-header reveal" ref={headerRef}>
         <div>
           <div className="section-label">Portfolio</div>
-          <h2 className="section-title">Cada evento,<br /><strong>una obra.</strong></h2>
+          <h2 className="section-title">Cada obra<br /><strong>comienza así.</strong></h2>
         </div>
       </div>
 
@@ -35,7 +35,7 @@ export default function Proyectos() {
               <div className="project-card-placeholder">
                 <img
                   src={img}
-                  alt={`Evento ${i + 1}`}
+                  alt={`Montaje ${i + 1}`}
                   className="pc-bg"
                   loading="lazy"
                   style={{ objectFit: 'cover', width: '100%', height: '100%' }}
