@@ -8,7 +8,6 @@ import Proyectos from './components/Proyectos'
 import Diferencial from './components/Diferencial'
 import Servicios from './components/Servicios'
 import Proceso from './components/Proceso'
-import Experiencias from './components/Experiencias'
 import CTA from './components/CTA'
 import Footer from './components/Footer'
 import './App.css'
@@ -26,7 +25,6 @@ export default function App() {
           <Diferencial />
           <Servicios />
           <Proceso />
-          <Experiencias />
           <CTA />
         </main>
         <Footer />
